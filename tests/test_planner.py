@@ -43,7 +43,7 @@ def test_is_urgent_when_due_overdue():
 def test_sort_by_soonest_task_first():
     tasks = [
         {"title": "B", "due": date(2026, 10, 25)},
-        {"title": "B", "due": date(2026, 10, 20)},
+        {"title": "A", "due": date(2026, 10, 20)},
     ] 
 
     assert [t["title"] for t in  sort_by_due(tasks)] == ["A", "B"]
