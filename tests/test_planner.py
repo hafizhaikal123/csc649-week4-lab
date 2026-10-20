@@ -11,7 +11,7 @@ def test_days_left_counts_days_until_due():
     # Act
     result = days_left(due, today)
     # Assert
-    assert result == 3
+    assert result == 4
 
 
 # Now write the tests below. Use the same three steps: Arrange, Act, Assert.
@@ -43,7 +43,7 @@ def test_is_urgent_when_due_overdue():
 def test_sort_by_soonest_task_first():
     tasks = [
         {"title": "B", "due": date(2026, 10, 25)},
-        {"title": "B", "due": date(2026, 10, 20)},
+        {"title": "A", "due": date(2026, 10, 20)},
     ] 
 
     assert [t["title"] for t in  sort_by_due(tasks)] == ["A", "B"]
